@@ -63,13 +63,56 @@ const ContactSection = () => {
 //   }
 // };
 
-const handleSubmit = async (e: React.FormEvent) => {
+// const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+//   setIsSubmitting(true);
+
+//   const apiUrl = process.env.NODE_ENV === 'production'
+//     ? 'https://portfoliobackendapi.vercel.app/api/contact' // Vercel automatically handles the serverless function route
+//     : 'http://localhost:5000/api/contact'; // Local development server
+
+//   try {
+//     const response = await fetch(apiUrl, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(formData)
+//     });
+
+//     const result = await response.json();
+
+//     if (response.ok) {
+//       toast({
+//         title: 'Message Sent!',
+//         description: 'Thanks for reaching out. We\'ll get back to you soon.',
+//       });
+//       setFormData({ name: '', email: '', message: '' });
+//     } else {
+//       toast({
+//         title: 'Error',
+//         description: result.message || 'Something went wrong. Please try again.',
+//         variant: 'destructive',
+//       });
+//     }
+//   } catch (error) {
+//     console.error('Error:', error);
+//     toast({
+//       title: 'Network Error',
+//       description: 'Could not connect to the server.',
+//       variant: 'destructive',
+//     });
+//   } finally {
+//     setIsSubmitting(false);
+//   }
+// };
+
+  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
 
-  const apiUrl = process.env.NODE_ENV === 'production'
-    ? 'https://portfoliobackendapi.vercel.app/api/contact' // Vercel automatically handles the serverless function route
-    : 'http://localhost:5000/api/contact'; // Local development server
+  // Use the environment variable for the API URL
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contact'; // Local development fallback
 
   try {
     const response = await fetch(apiUrl, {
