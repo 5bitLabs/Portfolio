@@ -1,0 +1,39 @@
+# Node.js
+/node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# React build output
+/frontend/build/
+
+# Frontend environment files
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development
+/frontend/.env.production
+
+# Backend environment files
+/backend/.env
+/backend/.env.local
+/backend/.env.development
+/backend/.env.production
+
+# Vercel specific
+/.vercel/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Other potential files to ignore
+*.swp
