@@ -39,9 +39,72 @@
 
 
 // api/contact.js
+// import nodemailer from 'nodemailer';
+
+// export default async function handler(req, res) {
+//   // Only allow POST method
+//   if (req.method !== 'POST') {
+//     return res.status(405).json({ message: 'Method not allowed' });
+//   }
+
+//   const { name, email, message } = req.body;
+
+//   // Validate the request body
+//   if (!name || !email || !message) {
+//     return res.status(400).json({ message: 'Missing required fields' });
+//   }
+
+//   const transporter = nodemailer.createTransport({
+//     service: 'gmail',
+//     auth: {
+//       user: process.env.EMAIL_USER,
+//       pass: process.env.EMAIL_PASS,
+//     },
+//   });
+
+//   try {
+//     await transporter.sendMail({
+//       from: process.env.EMAIL_USER, // Changed from user's email to your email
+//       replyTo: email, // Set the reply-to to user's email
+//       to: process.env.EMAIL_USER,
+//       subject: `New Contact Message from ${name}`,
+//       html: `
+//         <h2>Contact Details</h2>
+//         <p><strong>Name:</strong> ${name}</p>
+//         <p><strong>Email:</strong> ${email}</p>
+//         <p><strong>Message:</strong><br />${message}</p>
+//       `
+//     });
+
+//     res.status(200).json({ success: true, message: 'Email sent successfully.' });
+//   } catch (error) {
+//     console.error('Error sending email:', error);
+//     res.status(500).json({ success: false, message: 'Failed to send email.' });
+//   }
+// }
+
+
+
+
+// api/contact.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*'); // In production, replace with your frontend domain
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  // Handle preflight request
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
   // Only allow POST method
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
@@ -54,15 +117,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
   try {
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
     await transporter.sendMail({
       from: process.env.EMAIL_USER, // Changed from user's email to your email
       replyTo: email, // Set the reply-to to user's email
@@ -79,6 +142,6 @@ export default async function handler(req, res) {
     res.status(200).json({ success: true, message: 'Email sent successfully.' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ success: false, message: 'Failed to send email.' });
+    res.status(500).json({ success: false, message: 'Failed to send email.', error: error.message });
   }
 }
