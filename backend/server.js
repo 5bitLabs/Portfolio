@@ -10,6 +10,7 @@
     // app.use(cors());
     app.use(cors({
     origin: 'https://www.5bitlabs.com/', // Allow requests from any frontend (for dev testing)
+    credentials: true
     }));
     app.use(express.json());
 
