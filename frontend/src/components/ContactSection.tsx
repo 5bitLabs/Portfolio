@@ -107,12 +107,58 @@ const ContactSection = () => {
 //   }
 // };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+//   const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+//   setIsSubmitting(true);
+
+//   // Use the environment variable for the API URL
+//   const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contact'; // Local development fallback
+
+//   try {
+//     const response = await fetch(apiUrl, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(formData)
+//     });
+
+//     const result = await response.json();
+
+//     if (response.ok) {
+//       toast({
+//         title: 'Message Sent!',
+//         description: 'Thanks for reaching out. We\'ll get back to you soon.',
+//       });
+//       setFormData({ name: '', email: '', message: '' });
+//     } else {
+//       toast({
+//         title: 'Error',
+//         description: result.message || 'Something went wrong. Please try again.',
+//         variant: 'destructive',
+//       });
+//     }
+//   } catch (error) {
+//     console.error('Error:', error);
+//     toast({
+//       title: 'Network Error',
+//       description: 'Could not connect to the server.',
+//       variant: 'destructive',
+//     });
+//   } finally {
+//     setIsSubmitting(false);
+//   }
+// };
+
+// Update the handleSubmit function in ContactSection.tsx
+const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
 
-  // Use the environment variable for the API URL
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contact'; // Local development fallback
+  // Use environment variable for production API URL
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/contact';
+  // For production, this should be set in your Vercel environment variables
+  // For development, you can use a .env.local file
 
   try {
     const response = await fetch(apiUrl, {
@@ -149,8 +195,6 @@ const ContactSection = () => {
     setIsSubmitting(false);
   }
 };
-
-
   return (
     <section id="contact" className="section-padding bg-gradient-to-b from-secondary/5 to-background relative overflow-hidden">
       {/* Background Elements */}
