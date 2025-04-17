@@ -68,7 +68,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   const apiUrl = process.env.NODE_ENV === 'production'
-    ? '/api/contact' // Vercel automatically handles the serverless function route
+    ? 'https://portfoliobackendapi.vercel.app/api/contact' // Vercel automatically handles the serverless function route
     : 'http://localhost:5000/api/contact'; // Local development server
 
   try {
