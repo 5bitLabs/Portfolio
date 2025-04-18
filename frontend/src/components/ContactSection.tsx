@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import axios from 'axios';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -152,9 +151,9 @@ const ContactSection = () => {
 // };
 
 // Update the handleSubmit function in ContactSection.tsx
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+// const handleSubmit = async (e: React.FormEvent) => {
+//   e.preventDefault();
+//   setIsSubmitting(true);
 
   // Use environment variable for production API URL
 //   const apiUrl = import.meta.env.REACT_APP_API_URL;
