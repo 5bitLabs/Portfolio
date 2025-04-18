@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -156,45 +157,85 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   // Use environment variable for production API URL
-  const apiUrl = import.meta.env.REACT_APP_API_URL;
-  // For production, this should be set in your Vercel environment variables
-  // For development, you can use a .env.local file
+//   const apiUrl = import.meta.env.REACT_APP_API_URL;
+//   // For production, this should be set in your Vercel environment variables
+//   // For development, you can use a .env.local file
 
-  try {
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
+//   try {
+//     const response = await fetch(apiUrl, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(formData)
+//     });
 
-    const result = await response.json();
+//     const result = await response.json();
 
-    if (response.ok) {
-      toast({
-        title: 'Message Sent!',
-        description: 'Thanks for reaching out. We\'ll get back to you soon.',
+//     if (response.ok) {
+//       toast({
+//         title: 'Message Sent!',
+//         description: 'Thanks for reaching out. We\'ll get back to you soon.',
+//       });
+//       setFormData({ name: '', email: '', message: '' });
+//     } else {
+//       toast({
+//         title: 'Error',
+//         description: result.message || 'Something went wrong. Please try again.',
+//         variant: 'destructive',
+//       });
+//     }
+//   } catch (error) {
+//     console.error('Error:', error);
+//     toast({
+//       title: 'Network Error',
+//       description: 'Could not connect to the server.',
+//       variant: 'destructive',
+//     });
+//   } finally {
+//     setIsSubmitting(false);
+//   }
+// };
+
+
+    const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const apiUrl = import.meta.env.REACT_APP_API_URL;
+
+    try {
+      const response = await axios.post(apiUrl, formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        withCredentials: true
       });
-      setFormData({ name: '', email: '', message: '' });
-    } else {
+
+      if (response.status === 200) {
+        toast({
+          title: 'Message Sent!',
+          description: 'Thanks for reaching out. We\'ll get back to you soon.',
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast({
+          title: 'Error',
+          description: response.data.message || 'Something went wrong. Please try again.',
+          variant: 'destructive',
+        });
+      }
+    } catch (error: any) {
+      console.error('Error:', error);
       toast({
-        title: 'Error',
-        description: result.message || 'Something went wrong. Please try again.',
+        title: 'Network Error',
+        description: error?.response?.data?.message || 'Could not connect to the server.',
         variant: 'destructive',
       });
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    console.error('Error:', error);
-    toast({
-      title: 'Network Error',
-      description: 'Could not connect to the server.',
-      variant: 'destructive',
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
   return (
     <section id="contact" className="section-padding bg-gradient-to-b from-secondary/5 to-background relative overflow-hidden">
       {/* Background Elements */}
