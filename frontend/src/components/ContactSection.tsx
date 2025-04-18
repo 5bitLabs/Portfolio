@@ -156,7 +156,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   setIsSubmitting(true);
 
   // Use environment variable for production API URL
-  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5000/api/contact';
+  const apiUrl = import.meta.env.REACT_APP_API_URL;
   // For production, this should be set in your Vercel environment variables
   // For development, you can use a .env.local file
 
