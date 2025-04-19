@@ -2,15 +2,15 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/703d98ae-7957-4752-b5cb-12be24e63542
+**URL**: https://5bitlabs.com/
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use 5bitLabs**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/703d98ae-7957-4752-b5cb-12be24e63542) and start prompting.
+Simply visit the [5bitLabs Project](https://5bitlabs.com/) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -62,15 +62,15 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/703d98ae-7957-4752-b5cb-12be24e63542) and click on Share -> Publish.
+Simply Ask to [5bitLabs](https://5bitlabs.com/) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my project?
 
 Yes it is!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Read more here: [Setting up a custom domain](https://5bitlabs.com/)
 
 ### Run project from start :
 
