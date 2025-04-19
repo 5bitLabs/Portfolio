@@ -202,7 +202,7 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const apiUrl = import.meta.env.REACT_APP_API_URL | 'https://portfoliobackendapi.vercel.app/api/contact';
+    const apiUrl = import.meta.env.REACT_APP_API_URL || 'https://portfoliobackendapi.vercel.app/api/contact';
 
     try {
       const response = await axios.post(apiUrl, formData, {
