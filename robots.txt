@@ -1,7 +1,4 @@
 User-agent: *
-Allow: /
-
-User-agent: *
 Disallow:
 
 User-agent: Mediapartners-Google
