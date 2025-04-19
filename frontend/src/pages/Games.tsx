@@ -23,7 +23,7 @@ const Games = () => {
      {
       title: "Dynamic tic-tac-toe",
       description: "Challenge your mind with intricate puzzles and brain teasers in this strategic game.",
-      imageUrl: "/assets/DTTT.PNG",
+      imageUrl: "/assets/DyTTT_final.png",
       category: "Puzzle",
       playUrl: "https://dynamic-tic-tac-toe.5bitlabs.com/"
     },

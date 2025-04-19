@@ -42,12 +42,17 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              {/* <span className="text-2xl font-bold neon-text tracking-tight">5BitLabs</span> */}
-              <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-pink-500 via-rose-400 to-orange-400 text-transparent bg-clip-text drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]">
-                5bitLabs
-              </span>
+              <span className="text-2xl font-bold neon-text tracking-tight">5BitLabs</span>
+              {/* <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-pink-500 via-rose-400 to-orange-400 text-transparent bg-clip-text drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]">
+                5BitLabs
+              </span> */}
             </Link>
           </div>
+
+
+
+          {/* rest of your code stays the same */}
+
           <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => {
           const isHash = item.href.startsWith('#');

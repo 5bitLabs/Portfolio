@@ -67,6 +67,16 @@ const Footer = () => {
                   Custom Software
                 </a>
               </li>
+              <li>
+                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Digital Marketing
+                </a>
+              </li>
+              {/* <li>
+                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blockchain and Web 3.0 solutions
+                </a>
+              </li> */}
             </ul>
           </div>
           
@@ -78,11 +88,11 @@ const Footer = () => {
                   About Us
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
                   Our Projects
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Careers
@@ -123,7 +133,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 mt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} 5BitLabs. All rights reserved.
+            © {new Date().getFullYear()} 5BitLabs™. All rights reserved.
           </p>
         </div>
       </div>

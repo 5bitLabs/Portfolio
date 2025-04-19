@@ -31,7 +31,7 @@ const ServicesSection = () => {
       description: 'Immersive gaming experiences with cutting-edge graphics and engaging gameplay mechanics.',
       icon: Gamepad,
       features: [
-        '2D and 3D game development',
+        '2D game development',
         'Multiplayer functionality',
         'Cross-platform compatibility',
         'Game optimization'
@@ -49,6 +49,19 @@ const ServicesSection = () => {
         'Campaign Planning & Execution'
       ]
     }
+  //     {
+  //     title: 'AI / ML Development',
+  //     description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
+  //     icon: Brain, // swap with your icon source as needed
+  //   features: [
+  //     'AI voice agents & assistants',
+  //     'Chatbot development',
+  //     'AI/ML-based applications',
+  //     'Predictive analytics systems',
+  //     'Computer vision solutions'
+  //   ]
+  // }
+
     // {
     //   title: 'Cloud Services',
     //   description: 'Scalable cloud solutions to ensure your applications run smoothly and securely.',

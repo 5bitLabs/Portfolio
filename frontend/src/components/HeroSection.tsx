@@ -135,7 +135,7 @@ const HeroSection = () => {
             <div className="mb-6 inline-block">
               <div className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary inline-flex items-center gap-2">
                 <span className="inline-block w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                Think Fast, Click Faster - The 5bit Way!
+                Think Fast, Click Faster - The 5Bit Way!
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 neon-text tracking-tight">
