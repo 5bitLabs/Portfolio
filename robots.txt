@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+User-agent: *
+Disallow:
+
+User-agent: Mediapartners-Google
+Disallow:
+
 Sitemap : https://5bitlabs.com/sitemap.xml
