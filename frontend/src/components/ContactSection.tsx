@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -201,14 +202,13 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const apiUrl = import.meta.env.REACT_APP_API_URL;
+    const apiUrl = import.meta.env.REACT_APP_API_URL | 'https://portfoliobackendapi.vercel.app/api/contact';
 
     try {
       const response = await axios.post(apiUrl, formData, {
         headers: {
           'Content-Type': 'application/json'
         },
-        withCredentials: true
       });
 
       if (response.status === 200) {
