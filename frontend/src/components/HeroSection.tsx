@@ -102,6 +102,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code, Layers, Megaphone, Smartphone } from 'lucide-react';
+import { LuBrainCircuit } from "react-icons/lu";
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -176,6 +177,10 @@ const HeroSection = () => {
                 <div className="glass-card p-6 rounded-xl shadow-lg animate-float hover:scale-105 transition-transform" style={{ animationDelay: '3s' }}>
                   <Megaphone size={40} className="text-yellow-400 animate-glow" />
                   <h3 className="mt-3 font-bold text-center">Digital Marketing</h3>
+                </div>
+                <div className="glass-card p-6 rounded-xl shadow-lg animate-float hover:scale-105 transition-transform" style={{ animationDelay: '3s' }}>
+                  <LuBrainCircuit size={40} className="text-blue-400 animate-glow" />
+                  <h3 className="mt-3 font-bold text-center">AI / ML</h3>
                 </div>
               </div>
             </div>

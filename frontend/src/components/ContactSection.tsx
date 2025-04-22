@@ -356,7 +356,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Visit Us</h4>
                     <p className="text-muted-foreground">
-                        Ahemdabad,Gujarat,India<br />
+                        Ahmedabad, Gujarat, India<br/>
                     </p>
                   </div>
                 </div>

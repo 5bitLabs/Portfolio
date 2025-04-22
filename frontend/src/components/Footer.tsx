@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold neon-text mb-4">5BitLabs</h3>
             <p className="text-muted-foreground mb-6">
-              Transforming ideas into digital reality through innovative websites, 
+              Transforming ideas into digital reality through innovative websites,
               games, and mobile applications.
             </p>
             <div className="flex space-x-4">
@@ -28,14 +28,14 @@ const Footer = () => {
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a href="" className="text-muted-foreground hover:text-primary transition-colors">
+              {/* <a href="" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
-              </a>
+              </a> */}
             </div>
           </div>
           
@@ -57,19 +57,24 @@ const Footer = () => {
                   Game Development
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Cloud Services
+                </a>
+              </li> */}
+              <li>
+                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Digital Marketing
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+                  AI/ML Services
                 </a>
               </li>
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Custom Software
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Digital Marketing
                 </a>
               </li>
               {/* <li>
@@ -115,7 +120,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
               <li className="text-muted-foreground">
-                  Ahemdabad,Gujarat,India<br />
+                  Ahmedabad, Gujarat, India<br />
               </li>
               <li>
                 <a href="mailto:info@5bitlabs.com" className="text-muted-foreground hover:text-primary transition-colors">
