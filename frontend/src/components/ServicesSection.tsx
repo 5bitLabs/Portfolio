@@ -1,5 +1,6 @@
 
 import { Code, Globe, Smartphone, Gamepad,Megaphone,Database, Cloud } from 'lucide-react';
+import { LuBrainCircuit } from "react-icons/lu";
 import ServiceCard from './ServiceCard';
 
 const ServicesSection = () => {
@@ -39,7 +40,7 @@ const ServicesSection = () => {
     },
      {
       title: 'Digital Marketing',
-      description: 'In a world where attention is currency, we help brands become unforgettable. From the spark of an idea to the moment it goes viral, we’re there crafting stories, building connections, and turning your brand into an experience people can’t stop talking about. This isn’t just digital marketing. It’s transformation.',
+      description: 'In a world where attention is everything, we turn brands into unforgettable experiences - crafting stories, building buzz, and sparking viral moments that leave a lasting impact.',
       icon:Megaphone,
       features: [
         'Visual content creation',
@@ -48,20 +49,31 @@ const ServicesSection = () => {
         'Influencer & Creator Collaboration',
         'Campaign Planning & Execution'
       ]
-    }
-  //     {
-  //     title: 'AI / ML Development',
-  //     description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
-  //     icon: Brain, // swap with your icon source as needed
-  //   features: [
-  //     'AI voice agents & assistants',
-  //     'Chatbot development',
-  //     'AI/ML-based applications',
-  //     'Predictive analytics systems',
-  //     'Computer vision solutions'
-  //   ]
-  // }
-
+    },
+    {
+      title: 'AI / ML Development',
+      description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
+      icon:LuBrainCircuit, // swap with your icon source as needed
+      features: [
+        'AI voice agents & assistants',
+        'Chatbot development',
+        'AI/ML-based applications',
+        'Predictive analytics systems',
+        'Computer vision solutions'
+      ]
+    },
+    // {
+    //   title: 'AR / VR Development',
+    //   description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
+    //   icon:LuBrainCircuit, // swap with your icon source as needed
+    //   features: [
+    //     'AI voice agents & assistants',
+    //     'Chatbot development',
+    //     'AI/ML-based applications',
+    //     'Predictive analytics systems',
+    //     'Computer vision solutions'
+    //   ]
+    // },
     // {
     //   title: 'Cloud Services',
     //   description: 'Scalable cloud solutions to ensure your applications run smoothly and securely.',

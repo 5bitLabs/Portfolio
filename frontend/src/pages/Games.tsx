@@ -30,7 +30,7 @@ const Games = () => {
     {
       title: "Space Math Adventure",
       description: "Let's get your brain horses running with this Space Math Adventure..!!",
-      imageUrl: "/assets/space_game_image.jpeg",
+      imageUrl: "/assets/Space_Math_Adventure.png",
       category: "Educational",
       playUrl: "https://space-math-adventure.5bitlabs.com/"
     }
