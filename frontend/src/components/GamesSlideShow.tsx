@@ -56,7 +56,7 @@ const GamesSlideShow = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-b from-secondary/10 via-background to-background relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
+    <section id="games" className="section-padding bg-gradient-to-b from-secondary/10 via-background to-background relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
       {/* Background Elements */}
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-accent/5 rounded-full blur-[120px]"></div>
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
