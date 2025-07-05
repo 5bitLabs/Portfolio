@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Gamepad, ChevronLeft, ChevronRight } from "lucide-react";
 
-const GamesSlideshow = () => {
+const GamesSlideShow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const games = [
@@ -20,6 +20,13 @@ const GamesSlideshow = () => {
       imageUrl: "/assets/Space_Math_Adventure.png",
       category: "Educational",
       playUrl: "https://space-math-adventure.5bitlabs.com/"
+    },
+    {
+      title: "Idle Sort",
+      description: "Let's sort the things out..!!",
+      imageUrl: "https://play-lh.googleusercontent.com/4T-i9DaRme6jtgShcUnJ71YtyfTJRvD3hb7G0-YPDzNQ5ID_oaqF5dSqNcmmWffRDA=w480-h960-rw",
+      category: "Sorting",
+      playUrl: "https://play.google.com/store/apps/details?id=com.BucketofGames.IdleSort&pcampaignid=web_share"
     }
   ];
 
@@ -49,7 +56,7 @@ const GamesSlideshow = () => {
   };
 
   return (
-    <section className="section-padding bg-gradient-to-b from-secondary/10 via-background to-background relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-b from-secondary/10 via-background to-background relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
       {/* Background Elements */}
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-accent/5 rounded-full blur-[120px]"></div>
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
@@ -59,7 +66,7 @@ const GamesSlideshow = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Games</h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Experience our collection of exciting games
+            Experience our collection of exciting games..!!
           </p>
         </div>
         
@@ -140,4 +147,4 @@ const GamesSlideshow = () => {
   );
 };
 
-export default GamesSlideshow;
+export default GamesSlideShow;

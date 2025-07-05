@@ -13,14 +13,7 @@ const Games = () => {
   }, []);
 
   const games = [
-    // {
-    //   title: "Dynamic tic-tac-toe",
-    //   description: "Challenge your mind with intricate puzzles and brain teasers in this strategic game.",
-    //   imageUrl: "https://images.unsplash.com/photo-1611996575749-79a3a250f948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    //   category: "Puzzle",
-    //   playUrl: "https://dynamic-tic-tac-toe.5bitlabs.com/"
-    // },
-     {
+    {
       title: "Dynamic tic-tac-toe",
       description: "Challenge your mind with intricate puzzles and brain teasers in this strategic game.",
       imageUrl: "/assets/DyTTT_final.png",
@@ -33,6 +26,13 @@ const Games = () => {
       imageUrl: "/assets/Space_Math_Adventure.png",
       category: "Educational",
       playUrl: "https://space-math-adventure.5bitlabs.com/"
+    },
+    {
+      title: "Idle Sort",
+      description: "Let's sort the things out..!!",
+      imageUrl: "https://play-lh.googleusercontent.com/4T-i9DaRme6jtgShcUnJ71YtyfTJRvD3hb7G0-YPDzNQ5ID_oaqF5dSqNcmmWffRDA=w480-h960-rw",
+      category: "Sorting",
+      playUrl: "https://play.google.com/store/apps/details?id=com.BucketofGames.IdleSort&pcampaignid=web_share"
     }
     // {
     //   title: "Puzzle Masters",
@@ -75,7 +75,7 @@ const Games = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <section className="section-padding bg-gradient-to-b from-background via-background to-secondary/10 relative overflow-hidden">
+        <section className="section-padding bg-gradient-to-b from-background via-background to-secondary/10 relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
           {/* Background Elements */}
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-accent/5 rounded-full blur-[120px]"></div>
           <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>

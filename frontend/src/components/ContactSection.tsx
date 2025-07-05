@@ -236,7 +236,7 @@ const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="section-padding bg-gradient-to-b from-secondary/5 to-background relative overflow-hidden">
+    <section id="contact" className="section-padding bg-gradient-to-b from-secondary/5 to-background relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
       {/* Background Elements */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-[120px]"></div>
@@ -343,8 +343,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">Call Us</h4>
-                    <a href="tel:+12345678901" className="text-muted-foreground hover:text-primary transition-colors">
-                      +91 8460240025
+                    <a href="tel:+919137926063" className="text-muted-foreground hover:text-primary transition-colors">
+                      +91 9137926063
                     </a>
                   </div>
                 </div>
@@ -370,6 +370,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-
-

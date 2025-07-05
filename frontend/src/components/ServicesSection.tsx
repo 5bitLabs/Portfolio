@@ -10,31 +10,33 @@ const ServicesSection = () => {
       description: 'Modern, responsive websites built with the latest technologies for optimal performance and user experience.',
       icon: Globe,
       features: [
+        'Shopify Webstore',
         'Responsive design for all devices',
         'SEO optimization',
         'Performance focused development',
-        'CMS integration'
+        // 'CMS integration'
       ]
     },
-    {
-      title: 'Mobile App Development',
-      description: 'Feature-rich mobile applications for iOS and Android platforms with intuitive user interfaces.',
-      icon: Smartphone,
-      features: [
-        'Cross-platform development',
-        'Native app development',
-        'App Store optimization',
-        'Regular maintenance & updates'
-      ]
-    },
+    // {
+    //   title: 'Mobile App Development',
+    //   description: 'Feature-rich mobile applications for iOS and Android platforms with intuitive user interfaces.',
+    //   icon: Smartphone,
+    //   features: [
+    //     'Cross-platform development',
+    //     'Native app development',
+    //     'App Store optimization',
+    //     'Regular maintenance & updates'
+    //   ]
+    // },
     {
       title: 'Game Development',
       description: 'Immersive gaming experiences with cutting-edge graphics and engaging gameplay mechanics.',
       icon: Gamepad,
       features: [
-        '2D game development',
-        'Multiplayer functionality',
-        'Cross-platform compatibility',
+        'Unity Game Development',
+        '2D & 3D Game Development',
+        // 'Multiplayer functionality',
+        // 'Cross-platform compatibility',
         'Game optimization'
       ]
     },
@@ -43,25 +45,26 @@ const ServicesSection = () => {
       description: 'In a world where attention is everything, we turn brands into unforgettable experiences - crafting stories, building buzz, and sparking viral moments that leave a lasting impact.',
       icon:Megaphone,
       features: [
-        'Visual content creation',
+        'Logo Designing',
+        'Visual Content Creation',
         'Social media content', 
         'Research and Trends analysis',
-        'Influencer & Creator Collaboration',
-        'Campaign Planning & Execution'
+        // 'Influencer & Creator Collaboration',
+        // 'Campaign Planning & Execution'
       ]
     },
-    {
-      title: 'AI / ML Development',
-      description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
-      icon:LuBrainCircuit, // swap with your icon source as needed
-      features: [
-        'AI voice agents & assistants',
-        'Chatbot development',
-        'AI/ML-based applications',
-        'Predictive analytics systems',
-        'Computer vision solutions'
-      ]
-    },
+    // {
+    //   title: 'AI / ML Development',
+    //   description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
+    //   icon:LuBrainCircuit, // swap with your icon source as needed
+    //   features: [
+    //     'AI voice agents & assistants',
+    //     'Chatbot development',
+    //     'AI/ML-based applications',
+    //     'Predictive analytics systems',
+    //     'Computer vision solutions'
+    //   ]
+    // },
     // {
     //   title: 'AR / VR Development',
     //   description: 'Smart solutions powered by artificial intelligence and machine learning, tailored to solve complex challenges and deliver futuristic user experiences.',
@@ -110,7 +113,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-gradient-to-b from-secondary/5 to-background relative overflow-hidden">
+    <section id="services" className="section-padding bg-gradient-to-b from-secondary/5 to-background relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
       {/* Background Elements */}
       <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-accent/5 rounded-full blur-[120px]"></div>
