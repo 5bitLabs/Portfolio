@@ -3,7 +3,7 @@ import { CircleCheck, Code, Users, Zap } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-gradient-to-b from-background to-secondary/5 relative overflow-hidden">
+    <section id="about" className="section-padding bg-gradient-to-b from-background to-secondary/5 relative overflow-hidden, relative min-h-screen hero-gradient flex items-center pt-16 overflow-hidden bg-grid-pattern">
       {/* Background Effects */}
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-[100px]"></div>
       <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-[100px]"></div>
@@ -29,18 +29,6 @@ const AboutSection = () => {
           </div>
           
           <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                <Code size={24} />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold mb-2">Technical Excellence</h4>
-                <p className="text-muted-foreground">
-                  Our team consists of skilled developers proficient in the latest technologies and frameworks,
-                  ensuring we deliver high-performance, scalable solutions.
-                </p>
-              </div>
-            </div>
             
             <div className="flex items-start gap-4">
               <div className="p-3 rounded-lg bg-accent/10 text-accent">
@@ -67,6 +55,20 @@ const AboutSection = () => {
                 </p>
               </div>
             </div>
+            
+            <div className="flex items-start gap-4">
+              <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                <Code size={24} />
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold mb-2">Technical Excellence</h4>
+                <p className="text-muted-foreground">
+                  Our team consists of skilled developers proficient in the latest technologies and frameworks,
+                  ensuring we deliver high-performance, scalable solutions.
+                </p>
+              </div>
+            </div>
+            
           </div>
         </div>
         

@@ -64,7 +64,7 @@ const ProjectCard = ({
               asChild
             >
               <a href={demoUrl} target="_blank" rel="noopener noreferrer">
-                Live Demo <ExternalLink size={14} />
+                Visit <ExternalLink size={14} />
               </a>
             </Button>
           )}

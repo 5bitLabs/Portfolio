@@ -16,14 +16,14 @@ const Footer = () => {
               games, and mobile applications.
             </p>
             <div className="flex space-x-4">
-              { /*<a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              {/* <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                  <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              </a> */}
+              {/* <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
-              </a>*/}
+              </a> */}
               <a href="https://www.instagram.com/5bitlabs/" className="text-muted-foreground hover:text-primary transition-colors"> 
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
@@ -31,8 +31,8 @@ const Footer = () => {
               {/* <a href="" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              </a> */}
+              {/* <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
               </a> */}
@@ -47,11 +47,11 @@ const Footer = () => {
                   Web Development
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Mobile App Development
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Game Development
@@ -67,16 +67,16 @@ const Footer = () => {
                   Digital Marketing
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   AI/ML Services
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Custom Software
                 </a>
-              </li>
+              </li> */}
               {/* <li>
                 <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
                   Blockchain and Web 3.0 solutions
@@ -93,26 +93,26 @@ const Footer = () => {
                   About Us
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
                   Our Projects
                 </a>
-              </li> */}
-              <li>
+              </li>
+              {/* <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Careers
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Terms of Service
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
           
@@ -128,8 +128,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+12345678901" className="text-muted-foreground hover:text-primary transition-colors">
-                  +91 8460240025
+                <a href="tel:+919137926063" className="text-muted-foreground hover:text-primary transition-colors">
+                  +91 9137926063
                 </a>
               </li>
             </ul>
@@ -138,7 +138,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 pt-8 mt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} 5BitLabs™. All rights reserved.
+            © {new Date().getFullYear()} <a href='https://5bitlabs.com' target=''>5BitLabs™.</a> All rights reserved.
           </p>
         </div>
       </div>
